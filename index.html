@@ -1,0 +1,85 @@
+<div class="container-fluid bg-1 text-center">
+	<div class="container-fluid bg-1 text-center">
+	<h3>Blood Sugar</h3>
+	<h4>December - January</h4>
+	<canvas id="myChart3" width="400" height="400"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script>
+		var ctx = document.getElementById("myChart3");
+		var myChart = new Chart(ctx, {
+			type : 'line',
+			data : {
+				labels : [ "16", "17", "18", "19", "20", "21", "22", "23",
+						"24", "25", "26", "27", "28", "29", "30", "31", "1",
+						"2", "3", "4", "5", "6", "7", "8", "9", "10", "11",
+						"12", "13", "14", "15" ],
+				datasets : [
+						{
+							label : 'FBS',
+							data : [ 203, 248, 292, 223, 224, 200, 191, 231,
+									210, 259, 194, 232, 249, 319, 247, 254,
+									225, 257, 166, 105, 257, 190, 96, 72, 196,
+									270, 157, 145, 201, 164, 252 ],
+							backgroundColor : [ 'rgba(255, 99, 132, 0)', ],
+							borderColor : [ 'rgba(255,99,132,1)', ],
+							borderWidth : 1
+						},
+
+						{
+							label : 'PPBS',
+							data : [ 203, 272, 272, 96, 131, 139, 217, 179, 66,
+									216, 124, 184, 205, 249, 183, 219, 195,
+									296, 179, 187, 157, 226, 69, 117, 124, 167,
+									220, 119, 189, 290, 226 ],
+							backgroundColor : [ 'rgba(2, 99, 132, 0)', ],
+							borderColor : [ 'rgba(2,99,132,1)', ],
+							borderWidth : 1
+						},
+
+						{
+							label : 'PPBS2',
+							data : [ 71, 222, 69, , 150, 95, 82, 288, 214, 90,
+									120, 165, , 121, 46, 126, 197, 145, 123,
+									144, 132, 232, 118, 140, 307, 145, 145,
+									198, 122, 198, 271 ],
+							backgroundColor : [ 'rgba(2, 99, 132, 0)', ],
+							borderColor : [ 'rgba(2,222,13,1)', ],
+							borderWidth : 1
+						},
+
+						{
+							label : 'PPBS3',
+							data : [ 316, 336, 217, 216, 207, 351, 85, 260,
+									194, , , 231, , 246, 190, 133, 168, 234,
+									195, 313, 220, 154, 272, 117, , 162, 208,
+									117, 159, 262, 343 ],
+							backgroundColor : [ 'rgba(2, 9, 3, 0)', ],
+							borderColor : [ 'rgba(2,99,222,1)', ],
+							borderWidth : 1
+						},
+
+						{
+							//label: 'Normal',
+							data : [ 600 ],
+							backgroundColor : [ 'rgba(2, 9, 3, 0)', ],
+							borderColor : [ 'rgba(2,99,222,0)', ],
+							borderWidth : 1
+						},
+
+				]
+
+			},
+			options : {
+				scales : {
+					yAxes : [ {
+						ticks : {
+							beginAtZero : false
+						}
+					} ]
+				}
+			}
+		});
+	</script>
+</div>
+</div>
+</div>
